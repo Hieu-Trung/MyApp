@@ -25,7 +25,11 @@ class DatabaseService{
       return null;
     }
   }
-  Stream<List<Todo>> listTodos() {
-    return todosCollection.snapshots().map(todoFromFirestore);
+  Stream<QuerySnapshot>listTodosA(){
+    return todosCollection.snapshots();
   }
-}
+  }
+  //Stream<List<Todo>> listTodos() {
+  //  return todosCollection.snapshots().map(todoFromFirestore);
+  //}
+//}
